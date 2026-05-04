@@ -1,0 +1,19 @@
+[project]
+name = "ai-debate"
+version = "0.1.0"
+description = "AI同士で議論し、合意した結論を実装まで持っていくCLIツール"
+requires-python = ">=3.10"
+dependencies = [
+    "anthropic>=0.45.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.scripts]
+ai-debate = "ai_debate.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
